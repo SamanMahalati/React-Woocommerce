@@ -1,0 +1,63 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+}
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.HeaderTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.HeaderTitleText {
+    font-size: 50px;
+    font-family: Iryekan;
+    color: var(--fontColor);
+}
+
+.HeaderTitleContent {
+    font-size: 20px;
+    line-height: 2.5rem;
+    color: var(--grayColor);
+}
+
+.startBtn {
+    background-color: var(--secondaryBlue);
+    color: var(--white);
+    padding: 1rem 3rem;
+    border: 0;
+    outline: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.startBtn svg {
+    padding: 0 0 5px 0;
+    height: 2rem;
+}
+
+.commentBtn {
+    background-color: var(--mainBlue);
+    color: var(--secondaryBlue);
+    padding: 1rem 2rem;
+    border: 0;
+    outline: none;
+    border-radius: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.HeaderBtnContainer {
+    display: flex;
+    gap: 0.7rem;
+}

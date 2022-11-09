@@ -1,0 +1,9 @@
+:root {
+    --grayWhite: #f9fafb ;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10rem 20rem 1rem 20rem;
+}
