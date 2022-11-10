@@ -1,0 +1,36 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+    --thirdBlue: #3B82F6;
+    --whiteSmoke: #F5F5F5;
+}
+
+.pageinnationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    background-color: var(--thirdBlue);
+    padding: 0.7rem 0;
+    border-radius: 7rem;
+    width: 20%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.pageinnationNumber {
+    background-color: var(--mainBlue);
+    color: var(--secondaryBlue);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0 0 0;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}

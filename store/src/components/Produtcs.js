@@ -2,6 +2,7 @@ import React , {useState , useEffect} from 'react';
 
 //components
 import Product from './Product';
+import ProductsPaginnation from './ProductsPaginnation';
 
 //Style
 import style from "./Products.module.css"
@@ -75,10 +76,19 @@ const productArray = [
 const Products = () => {
 
     const [products , setProducts] = useState([])
+    const [loading , setLoading] = useState(true)
+    const [currentPage , setCurrentPage] = useState(1)
+    const [productsPerPage , setProductsPerPage] = useState(6)
 
     useEffect(() => {
         setProducts(productArray)
     } , [])
+
+    const indexOfLastPost = currentPage * productsPerPage
+    const indexOfFirstPost = indexOfLastPost - productsPerPage
+    const currentProducts = products.slice(indexOfFirstPost , indexOfLastPost)
+
+    const pageinnate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
         <section className={style.ProductsSection}>
@@ -88,9 +98,10 @@ const Products = () => {
             </div>
             <div className={style.ProductContainer}>
                 {
-                    products.map(product => <Product key={product.id} data={product} />)
+                    currentProducts.map(product => <Product key={product.id} data={product} />)
                 }
             </div>
+            <ProductsPaginnation ProductsPerPage={productsPerPage} totalProducts={products.length} pageinnate={pageinnate}/>
         </section>
     );
 };
