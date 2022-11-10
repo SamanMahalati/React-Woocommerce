@@ -11,7 +11,10 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-cli": "^1.0.0-prealpha",
+    "web-vitals": "^2.1.4",
+    "webpack-dev-server": "^4.11.1",
+    "wepack": "^0.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

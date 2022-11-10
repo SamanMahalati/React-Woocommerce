@@ -1,0 +1,42 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+}
+
+.ProductTitleContainer {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.ProductTitle {
+    color: var(--secondaryBlue);
+    font-size: 30px;
+    padding: 3rem 0 0 0;
+    font-family: iryekan;
+}
+.ProductTitleEffect {
+    position: absolute;
+    bottom: 0.3rem;
+    width: 27rem;
+    height: 0.9rem;
+    opacity: 0.5;
+    text-align: center;
+    background-color: var(--mainBlue);
+}
+.ProductContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+.ProductsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
