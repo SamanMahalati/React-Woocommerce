@@ -31,6 +31,16 @@
     color: var(--secondaryBlue);
     cursor: pointer;
 }
+
+.navLink {
+    color: var(--fontColor);
+    text-decoration: none;
+}
+.navLink:hover {
+    color: var(--secondaryBlue);
+    cursor: pointer;
+}
+
 .Logo {
     height: 4.5rem;
 }

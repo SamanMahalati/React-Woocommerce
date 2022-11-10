@@ -1,8 +1,13 @@
 import React from 'react';
 import style from "./Navbar.module.css"
 
+//React Router Dom
+import { Link } from 'react-router-dom'; 
+
 //Logo
 import Logo from '../images/Logo.jpg'
+
+
 
 const Navbar = () => {
     return (
@@ -13,10 +18,10 @@ const Navbar = () => {
 
             <div className={style.navMenuContainer}>
                 <ul>
-                    <li>صفحه اصلی</li>
-                    <li>دوره ها</li>
-                    <li>نظرات دانشجویان</li>
-                    <li>درباره ما</li>
+                    <li><Link className={style.navLink} to="/">صفحه اصلی</Link></li>
+                    <li><Link className={style.navLink} to="/products">دوره های آموزشی</Link></li>
+                    <li><Link className={style.navLink} to="/blog">وبلاگ</Link></li>
+                    <li><Link className={style.navLink} to="/aboutus">درباره ما</Link></li>
                 </ul>
             </div>
 

@@ -32,4 +32,9 @@
     color: var(--secondaryBlue);
     border-radius: 10px;
     margin: 25px 0 0 0;
+    cursor: pointer;
+}
+.NotFoundLink {
+    text-decoration: none;
+    color: var(--secondaryBlue);
 }
