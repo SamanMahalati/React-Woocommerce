@@ -3,6 +3,7 @@ import React from 'react';
 //Components
 import Navbar from './components/Navbar';
 import Landing from './components/Landing';
+import NotFound from './components/NotFound';
 
 //Style
 import "./App.css" 
@@ -17,6 +18,8 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Landing/>}/>
+        <Route path='/NotFound' element={<NotFound/>}/>
+        <Route path='/*' element={<Navigate to='/NotFound' />}/>
       </Routes>
     </div>
   );

@@ -1,0 +1,35 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+}
+
+.NotFoundContainer {
+    padding: 10rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.NotFoundVector {
+    height: 32rem;
+}
+.NotFoundTitle {
+    font-size: 30px;
+    font-family: Iryekan;
+}
+.NotFoundButton {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 15px;
+    gap: 5px;
+    outline: none;
+    border: 0;
+    background-color: var(--mainBlue);
+    color: var(--secondaryBlue);
+    border-radius: 10px;
+    margin: 25px 0 0 0;
+}
