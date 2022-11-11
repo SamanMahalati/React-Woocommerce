@@ -3,6 +3,9 @@ import React, { useContext } from 'react';
 //Context
 import { CartContext } from '../context/CartContextProvider'
 
+//Functions
+import { isInCart } from '../helper/functions';
+
 //Style
 import style from "./Product.module.css"
 
@@ -11,7 +14,7 @@ const Product = ({ data }) => {
     const { id, image, Name, Time, Price } = data
 
     const { state, dispatch } = useContext(CartContext)
-    
+
     return (
         <div className={style.ProductCart}>
             <div className={style.ProductImageContainer}>
@@ -36,7 +39,12 @@ const Product = ({ data }) => {
                 </div>
 
                 <div className={style.ProductBtnContainer}>
-                    <button className={style.ProductBtnBuy}>ثبت نام</button>
+                    {
+                        isInCart(state, id) ?
+                        <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "INCREASE", payload: data })}> + </button> :
+                        <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "ADD_ITEM", payload: data })}>ثبت نام</button> 
+                    }
+                    
                     <span>{Price.toLocaleString('en-US')} تومان</span>
                 </div>
             </div>
@@ -44,6 +52,5 @@ const Product = ({ data }) => {
     );
 };
 
-// onClick={() => dispatch({type: "ADD_ITEM", payload: data})}
 
 export default Product;
