@@ -1,0 +1,18 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+    --whitesmoke: #FAFAFA ;
+}
+
+.UserBasketContainer {
+    padding: 10rem 3rem 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    gap: 1rem;
+    background-color: var(--whitesmoke);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
