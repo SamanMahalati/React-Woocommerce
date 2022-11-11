@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 
+//Context
+import { CartContext } from '../context/CartContextProvider'
 
 //Style
 import style from "./Product.module.css"
@@ -8,6 +10,8 @@ const Product = ({ data }) => {
 
     const { id, image, Name, Time, Price } = data
 
+    const { state, dispatch } = useContext(CartContext)
+    
     return (
         <div className={style.ProductCart}>
             <div className={style.ProductImageContainer}>
@@ -39,5 +43,7 @@ const Product = ({ data }) => {
         </div>
     );
 };
+
+// onClick={() => dispatch({type: "ADD_ITEM", payload: data})}
 
 export default Product;
