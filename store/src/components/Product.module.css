@@ -1,9 +1,9 @@
 :root {
-    --secondaryBlue: #1E40AF ;
-    --mainBlue: #BFDBFE ;
-    --white: #fff ;
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
     --fontColor: #344460;
-    --grayColor: #757575 ;
+    --grayColor: #757575;
     --thirdBlue: #1D4ED8;
 }
 
@@ -16,6 +16,7 @@
 .ProductImage {
     height: 20rem;
 }
+
 .ProductName {
     font-size: 19px;
 }
@@ -26,6 +27,7 @@
     flex-direction: column;
     gap: 0.7rem;
 }
+
 .ProductTimeContainer {
     display: flex;
     align-items: center;
@@ -39,9 +41,11 @@
     height: 1.3rem;
     color: var(--thirdBlue);
 }
+
 .ProductTime {
     color: var(--grayColor);
 }
+
 .ProductLinkContainer {
     display: flex;
     align-items: center;
@@ -50,12 +54,15 @@
     gap: 0.3rem;
     padding: 0 0 10px 0;
 }
+
 .ProductLinkContainer a {
     text-decoration: none;
 }
+
 .ProductLinkContainer a:link {
     color: var(--thirdBlue);
 }
+
 .ProductLinkContainer a:visited {
     color: var(--thirdBlue);
 }
@@ -66,7 +73,14 @@
     align-items: center;
     justify-content: space-between;
 }
-.ProductBtnBuy {
+
+.ProductBtns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ProductBtnBuy , .ProductBtnAdd , .ProductBtnMinus , .ProductBtnRemove {
     padding: 7px 30px;
     outline: none;
     border: 0;
@@ -75,4 +89,17 @@
     color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     cursor: pointer;
+}
+
+.ProductBtnAdd , .ProductBtnMinus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+}
+.ProductBtnAdd svg  , .ProductBtnMinus svg{
+    color: var(--white);
+}
+.quantity {
+    padding: 4px 5px 0 5px;
 }

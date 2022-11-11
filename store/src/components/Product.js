@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContextProvider'
 
 //Functions
-import { isInCart } from '../helper/functions';
+import { isInCart, quantityCount } from '../helper/functions';
 
 //Style
 import style from "./Product.module.css"
@@ -39,13 +39,40 @@ const Product = ({ data }) => {
                 </div>
 
                 <div className={style.ProductBtnContainer}>
-                    {
-                        isInCart(state, id) ?
-                        <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "INCREASE", payload: data })}> + </button> :
-                        <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "ADD_ITEM", payload: data })}>ثبت نام</button> 
-                    }
-                    
+                    <div className={style.ProductBtns}>
+                        {
+                            isInCart(state, id) ?
+
+                                <button className={style.ProductBtnAdd} onClick={() => dispatch({ type: "INCREASE", payload: data })}>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+
+                                </button>
+                                :
+                                <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "ADD_ITEM", payload: data })}>ثبت نام</button>
+                        }
+
+
+                        {quantityCount(state, id) > 0 && <span className={style.quantity}>{quantityCount(state, id)}</span>}
+
+
+                        {quantityCount(state, id) > 1 && <button className={style.ProductBtnMinus} onClick={() => dispatch({ type: "DECREASE", payload: data })}>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                            </svg>
+
+                        </button>}
+
+
+                        {quantityCount(state, id) === 1 && <button className={style.ProductBtnRemove} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: data })}>حذف</button>}
+
+                    </div>
+
                     <span>{Price.toLocaleString('en-US')} تومان</span>
+
                 </div>
             </div>
         </div>
