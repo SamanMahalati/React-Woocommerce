@@ -3,6 +3,7 @@
     --mainBlue: #BFDBFE ;
     --white: #fff ;
     --fontColor: #344460;
+    --thirdBlue: #000;
 }
 
 .navbar {
@@ -68,4 +69,18 @@
     font-size: 15px;
     gap: 0.3rem;
     cursor: pointer;
+    position: relative;
+}
+.navProductCounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondaryBlue);
+    color: var(--mainBlue);
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 1px 0 0 0;
 }
