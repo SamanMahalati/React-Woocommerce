@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 
 //Style
 import style from "./Product.module.css"
 
 const Product = ({ data }) => {
+
     const { id, image, Name, Time, Price } = data
+
     return (
         <div className={style.ProductCart}>
             <div className={style.ProductImageContainer}>
