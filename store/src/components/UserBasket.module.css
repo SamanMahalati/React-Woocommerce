@@ -5,14 +5,36 @@
     --fontColor: #344460;
     --grayColor: #757575 ;
     --whitesmoke: #FAFAFA ;
+    --LinkColor: #60A5FA;
 }
 
 .UserBasketContainer {
     padding: 10rem 3rem 5rem 3rem;
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     width: 50rem;
     gap: 1rem;
     background-color: var(--whitesmoke);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.emptyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.emptyContainer h5 {
+    color: var(--grayColor);
+}
+.emptyLinkContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--grayColor);
+}
+.emptyLink {
+    text-decoration: none;
+    color: var(--LinkColor);
 }
