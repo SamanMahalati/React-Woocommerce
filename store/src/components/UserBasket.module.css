@@ -1,14 +1,20 @@
 :root {
-    --secondaryBlue: #1E40AF ;
-    --mainBlue: #BFDBFE ;
-    --white: #fff ;
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
     --fontColor: #344460;
-    --grayColor: #757575 ;
-    --whitesmoke: #FAFAFA ;
+    --grayColor: #757575;
+    --whitesmoke: #FAFAFA;
     --LinkColor: #60A5FA;
 }
 
 .UserBasketContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.UserBasket {
     padding: 10rem 3rem 5rem 3rem;
     display: flex;
     min-height: 100vh;
@@ -18,6 +24,7 @@
     background-color: var(--whitesmoke);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+
 .emptyContainer {
     display: flex;
     flex-direction: column;
@@ -25,15 +32,18 @@
     align-items: center;
     gap: 1rem;
 }
+
 .emptyContainer h5 {
     color: var(--grayColor);
 }
+
 .emptyLinkContainer {
     display: flex;
     align-items: center;
     gap: 1rem;
     color: var(--grayColor);
 }
+
 .emptyLink {
     text-decoration: none;
     color: var(--LinkColor);
