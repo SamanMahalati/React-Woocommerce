@@ -38,8 +38,14 @@ const UserBasket = () => {
             </div>
 
             <div className={style.UserBasketCheckout}>
-                <span>جمع سبد خرید : {state.total}</span>
-                <span>تعداد محصولات : {state.itemsCounter}</span>
+                <div className={style.checkoutDetails}>
+                    <span>جمع سبد خرید : {state.total.toLocaleString('en-US')}</span>
+                    <span>تعداد محصولات : {state.itemsCounter}</span>
+                </div>
+                <div className={style.checkoutBtnContainer}>
+                    <button className={style.checkoutBtn}>خرید</button>
+                    <button className={style.clearBtn}>خالی کردن سبد خرید</button>
+                </div>
             </div>
 
         </section>

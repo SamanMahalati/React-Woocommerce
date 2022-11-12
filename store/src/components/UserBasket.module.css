@@ -6,12 +6,15 @@
     --grayColor: #757575;
     --whitesmoke: #FAFAFA;
     --LinkColor: #60A5FA;
+    --greenColor: #16A34A;
+    --redColor: #DC2626;
 }
 
 .UserBasketContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5rem;
 }
 
 .UserBasket {
@@ -47,4 +50,36 @@
 .emptyLink {
     text-decoration: none;
     color: var(--LinkColor);
+}
+
+.UserBasketCheckout {
+    padding: 10rem 3rem 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 1rem;
+    background-color: var(--whitesmoke);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    align-self: flex-start;
+    gap: 4rem;
+}
+.checkoutBtn , .clearBtn {
+    border: 0;
+    outline: none;
+    border-radius: 7px;
+    background-color: var(--greenColor);
+    color: var(--white);
+    padding: 0.6rem 1.3rem;
+}
+.clearBtn {
+    background-color: var(--redColor);
+}
+.checkoutBtnContainer {
+    display: flex;
+    gap: 1rem;
+}
+.checkoutDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
 }
