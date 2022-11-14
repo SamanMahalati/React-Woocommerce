@@ -9,6 +9,10 @@ import { isInCart, quantityCount } from '../helper/functions';
 //Style
 import style from "./Product.module.css"
 
+//Toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Product = ({ data }) => {
 
     const { id, image, Name, Time, Price } = data
@@ -51,7 +55,17 @@ const Product = ({ data }) => {
 
                                 </button>
                                 :
-                                <button className={style.ProductBtnBuy} onClick={() => dispatch({ type: "ADD_ITEM", payload: data })}>ثبت نام</button>
+                                <>
+                                    <button
+                                        className={style.ProductBtnBuy}
+                                        onClick={() => {
+                                            dispatch({ type: "ADD_ITEM", payload: data })
+                                            toast.success("محصول به سبد خرید اضافه شد");
+                                        }
+                                        }>
+                                        ثبت نام
+                                    </button>
+                                </>
                         }
 
 
@@ -67,7 +81,14 @@ const Product = ({ data }) => {
                         </button>}
 
 
-                        {quantityCount(state, id) === 1 && <button className={style.ProductBtnRemove} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: data })}>حذف</button>}
+                        {quantityCount(state, id) === 1 && <button
+                            className={style.ProductBtnRemove}
+                            onClick={() => {
+                                dispatch({ type: "REMOVE_ITEM", payload: data })
+                                toast.error("محصول مورد نظر حذف شد")
+                            } }>
+                            حذف
+                        </button>}
 
                     </div>
 
@@ -75,6 +96,7 @@ const Product = ({ data }) => {
 
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

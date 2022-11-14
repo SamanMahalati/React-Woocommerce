@@ -9,6 +9,10 @@ import UserBasketCart from './UserBasketCart';
 //Context
 import { CartContext } from '../context/CartContextProvider';
 
+//Toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 //Style
 import style from "./UserBasket.module.css"
 
@@ -48,6 +52,7 @@ const UserBasket = () => {
                 </div>
             </div>
 
+            <ToastContainer />
         </section>
     );
 };

@@ -6,6 +6,9 @@ import { CartContext } from '../context/CartContextProvider';
 //functions
 import { quantityCount } from '../helper/functions';
 
+//Toast 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //Style 
 import style from "./UserBasketCart.module.css"
@@ -80,9 +83,12 @@ const UserBasketCart = ({ data }) => {
                                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
                                     </svg>
 
-                                </button> 
+                                </button>
                                 :
-                                <button className={style.removeBtn} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: data })}>حذف</button>
+                                <button className={style.removeBtn} onClick={() => {
+                                    dispatch({ type: "REMOVE_ITEM", payload: data })
+                                    toast.error("محصول مورد نظر حذف شد")
+                                }}>حذف</button>
                         }
 
                     </div>
