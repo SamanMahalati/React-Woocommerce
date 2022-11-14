@@ -63,7 +63,9 @@
     align-self: flex-start;
     gap: 4rem;
 }
-.checkoutBtn , .clearBtn {
+
+.checkoutBtn,
+.clearBtn {
     border: 0;
     outline: none;
     border-radius: 7px;
@@ -71,13 +73,16 @@
     color: var(--white);
     padding: 0.6rem 1.3rem;
 }
+
 .clearBtn {
     background-color: var(--redColor);
 }
+
 .checkoutBtnContainer {
     display: flex;
     gap: 1rem;
 }
+
 .checkoutDetails {
     display: flex;
     flex-direction: column;

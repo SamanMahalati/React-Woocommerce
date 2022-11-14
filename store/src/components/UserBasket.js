@@ -9,18 +9,17 @@ import UserBasketCart from './UserBasketCart';
 //Context
 import { CartContext } from '../context/CartContextProvider';
 
-//Toast
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 //Style
 import style from "./UserBasket.module.css"
 
 //images
 import empty from "../images/empty-cart.svg"
 
-const UserBasket = () => {
-    const { state } = useContext(CartContext)
+//Sweet Alert
+import swal from "sweetalert"
+
+const UserBasket = ({ data }) => {
+    const { state, dispatch } = useContext(CartContext)
 
     return (
         <section className={style.UserBasketContainer}>
@@ -47,12 +46,18 @@ const UserBasket = () => {
                     <span>تعداد محصولات : {state.itemsCounter}</span>
                 </div>
                 <div className={style.checkoutBtnContainer}>
-                    <button className={style.checkoutBtn}>خرید</button>
+                    <button className={style.checkoutBtn} onClick={() => {
+                        dispatch({ type: "CHECKOUT", payload: data })
+                        swal({
+                            title: "خرید شما تکمیل شد",
+                            text: "محصول شما در حال آماده سازی برای ارسال است..",
+                            icon: "success",
+                            button: "باشه",
+                        })
+                    }}>خرید</button>
                     <button className={style.clearBtn}>خالی کردن سبد خرید</button>
                 </div>
             </div>
-
-            <ToastContainer />
         </section>
     );
 };

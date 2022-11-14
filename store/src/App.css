@@ -1,0 +1,15 @@
+/* Sweet Alert Style Satrt */
+
+.swal-footer {
+    text-align: right;
+    padding-top: 13px;
+    margin-top: 13px;
+    padding: 13px 16px;
+    border-radius: inherit;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    justify-content: end;
+}
+
+/* Sweet Alert Style End */
