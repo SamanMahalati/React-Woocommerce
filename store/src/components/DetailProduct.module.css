@@ -1,3 +1,104 @@
+:root {
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
+    --fontColor: #344460;
+    --grayColor: #757575;
+    --whiteDark: #fcfcfc ;
+    --greenColor: #16A34A ;
+    --forthBlue: #3B82F6 ;
+}
+
 .DetailContainer {
-    padding: 10rem 0 0 0;
+    padding: 11rem 0 0 0;
+    background-color: var(--whiteDark);
+}
+
+.DetailsBoxContainer {
+    background-color: var(--white);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    width: 65%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.DetailsCourseContainer {
+    display: flex;
+}
+
+.DetailProductBenfits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.DetailProductImage {
+    border-radius: 1rem;
+    height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.BenefitContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.3rem 0;
+    gap: 11px;
+}
+
+.BenefitContainer svg {
+    height: 1.2rem;
+}
+
+.DetailsRightPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0 1.3rem 5rem;
+}
+
+.DetailsProductFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DetailsProductBtn {
+    outline: none;
+    border: 0;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--greenColor);
+    color: var(--white);
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.DetailsProductBtn span {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+.DetailsProductPrice {
+    background-color: var(--forthBlue);
+    color: var(--white);
+    padding: 0.8rem 1rem;
+    border-radius: 6rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.DetailsTitleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.DetailProductName {
+    color: var(--fontColor);
+}
+
+.DetailProductGoals {
+    color: var(--grayColor);
 }
