@@ -24,6 +24,12 @@
     padding: 2rem;
 }
 
+.ProductDetailContainer {
+    width: 65%;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
 .DetailsCourseContainer {
     display: flex;
 }
@@ -82,11 +88,11 @@
     font-size: 16px;
 }
 .DetailsProductPrice {
-    background-color: var(--forthBlue);
-    color: var(--white);
-    padding: 0.8rem 1rem;
-    border-radius: 6rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    border: 1px solid var(--grayColor);
+    padding: 0.5rem;
+    border-radius: 1rem;
 }
 
 .DetailsTitleContainer {
@@ -101,4 +107,10 @@
 
 .DetailProductGoals {
     color: var(--grayColor);
+}
+
+.PeoductDetailText {
+    line-height: 2.5rem;
+    text-align: justify;
+    padding: 1.2rem 0;
 }
