@@ -6,6 +6,7 @@ import Landing from './components/Landing';
 import NotFound from './components/NotFound';
 import Products from './components/Produtcs';
 import UserBasket from './components/UserBasket';
+import DetailProduct from './components/DetailProduct';
 
 //Context
 import CartContextProvider from './context/CartContextProvider';
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/' element={<Landing />} />
           <Route path='/userBasket' element={<UserBasket />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/products/:id' element={<DetailProduct />} />
           <Route path='/NotFound' element={<NotFound />} />
           <Route path='/*' element={<Navigate to='/NotFound' />} />
         </Routes>
