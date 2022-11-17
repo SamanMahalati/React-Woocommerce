@@ -1,0 +1,81 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem 0 4rem 0;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerTopTitle {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footerContentText {
+    min-width: 10rem;
+    max-width: 35rem;
+    text-align: justify;
+    color: var(--grayColor);
+    line-height: 2.1rem;
+}
+
+.footerLogo {
+    height: 7rem;
+}
+
+.footerSiteParts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.footerSitePartsTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.SitePartsUl li {
+    margin: 0.8rem 0;
+    cursor: pointer;
+}
+.SitePartsLogosContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+.SitePartsLogosContainer svg {
+    cursor: pointer;
+    color: var(--secondaryBlue);
+}
+
+.footerCourses {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 0 4rem 0;
+}
+.footerCourses ul > li {
+    margin: 0.8rem 0;
+    cursor: pointer;
+}

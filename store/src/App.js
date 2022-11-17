@@ -7,6 +7,7 @@ import NotFound from './components/NotFound';
 import Products from './components/Produtcs';
 import UserBasket from './components/UserBasket';
 import DetailProduct from './components/DetailProduct';
+import Footer from './components/Footer';
 
 //Context
 import CartContextProvider from './context/CartContextProvider';
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='/NotFound' element={<NotFound />} />
           <Route path='/*' element={<Navigate to='/NotFound' />} />
         </Routes>
+        <Footer/>
       </CartContextProvider>
     </div>
   );
