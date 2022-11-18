@@ -84,3 +84,47 @@
     justify-content: center;
     padding: 1px 0 0 0;
 }
+
+.HamburgerContainer {
+    display: none;
+}
+
+@media screen and (max-width: 1410px) {
+    .navbar {
+        padding: 0.7rem 10rem 1rem 10rem;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .navbar {
+        padding: 0.7rem 5rem 1rem 5rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0.7rem 2rem 1rem 2rem;
+    }
+}
+@media screen and (max-width: 830px) {
+    .HamburgerContainer {
+        display: block;
+    }
+    .navLink {
+        display: none;
+    }
+    .Logo {
+        display: none;
+    }
+    .navbar {
+        justify-content: flex-start;
+    }
+    .navMenuContainer {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .Hamburger {
+        
+    }
+}

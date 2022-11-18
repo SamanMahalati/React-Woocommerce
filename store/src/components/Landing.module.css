@@ -7,3 +7,25 @@
     width: 100%;
     padding: 10rem 20rem 1rem 20rem;
 }
+
+@media screen and (max-width: 1720px) {
+    .main {
+        padding: 10rem 15rem 1rem 15rem;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .main {
+        padding: 10rem 10rem 1rem 10rem;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .main {
+        padding: 10rem 5rem 1rem 5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .main {
+        padding: 10rem 2rem 1rem 2rem;
+    }
+}

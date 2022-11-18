@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 
 //Logo
 import Logo from '../images/Logo.jpg'
+import Hamburger from "../images/hamburger.png"
+
 
 
 
@@ -20,6 +22,8 @@ const Navbar = () => {
                 <img src={Logo} alt="Logo" className={style.Logo} />
             </div>
 
+            <img className={style.HamburgerContainer} src={Hamburger} alt="Hamburger Menu" />
+            
             <div className={style.navMenuContainer}>
                 <ul>
                     <li><Link className={style.navLink} to="/">صفحه اصلی</Link></li>

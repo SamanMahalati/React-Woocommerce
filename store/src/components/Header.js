@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className={style.Header}>
             <div className={style.HeaderTitle}>
-                <h1 className={style.HeaderTitleText}>آموزش صفر تا صد برنامه نویسی وب</h1>
+                <h1 className={style.HeaderTitleText}>آموزش برنامه نویسی </h1>
                 <h5 className={style.HeaderTitleContent}>آموزش درست، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی جزو استاندارد های آموزشی که بدون شک باعث ورود شما به بازار کار خواهد شد.</h5>
                 <div className={style.HeaderBtnContainer}>
                     <button className={style.startBtn}>
@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={style.HeaderVector}>
-                <img src={HeaderVector} alt="Header Image" />
+                <img src={HeaderVector} alt="Header Image" className={style.HeaderVectorimg}/>
             </div>
         </header>
     );
