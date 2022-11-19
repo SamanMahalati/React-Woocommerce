@@ -87,6 +87,7 @@
 
 .HamburgerContainer {
     display: none;
+    height: 2rem;
 }
 
 @media screen and (max-width: 1410px) {
@@ -115,16 +116,20 @@
     .Logo {
         display: none;
     }
-    .navbar {
-        justify-content: flex-start;
+}
+@media screen and (max-width: 460px) {
+    .navBtnDarkMode {
+        display: none;
     }
-    .navMenuContainer {
-        flex-grow: 1;
+    .navBtn {
+        padding: 0.5rem;
     }
 }
-
-@media screen and (max-width: 450px) {
-    .Hamburger {
-        
+@media screen and (max-width: 370px) {
+    .navBtnBasket {
+        padding: 0.5rem;
+    }
+    .navbar {
+        justify-content: center;
     }
 }
