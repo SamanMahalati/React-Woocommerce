@@ -46,3 +46,21 @@
     padding: 10rem 0 5rem 0;
 
 }
+
+@media screen and (max-width:500px) {
+    .ProductTitleEffect {
+        width: 20rem;
+        bottom: 0;
+    }
+    .ProductTitle {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:320px) {
+    .ProductTitleEffect {
+        width: 15rem;
+    }
+    .ProductTitle {
+        font-size: 18px;
+    }
+}
