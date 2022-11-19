@@ -103,3 +103,14 @@
 .quantity {
     padding: 4px 5px 0 5px;
 }
+@media screen and (max-width: 880px) {
+    .ProductImage {
+        height: 27rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ProductImage {
+        height: 17rem;
+    }
+}
