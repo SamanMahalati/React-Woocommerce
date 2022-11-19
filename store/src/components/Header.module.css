@@ -99,4 +99,11 @@
     .HeaderBtnContainer {
         flex-wrap: wrap;
     }
+    .HeaderTitleText {
+        font-size: 25px;
+    }
+    .HeaderTitleContent {
+        font-size: 16px;
+    }
+
 }
