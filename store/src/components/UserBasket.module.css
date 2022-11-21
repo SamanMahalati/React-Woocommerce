@@ -80,11 +80,47 @@
 
 .checkoutBtnContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .checkoutDetails {
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+}
+
+@media screen and (max-width:930px) {
+    .UserBasket {
+        align-items: center;
+    }
+    .UserBasketContainer {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .UserBasket {
+        padding: 2rem 3rem;
+        order: 1;
+        
+    }
+    .UserBasketCheckout {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 9rem 3rem 2rem 3rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .UserBasketCheckout {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:360px) {
+    .UserBasket {
+        padding: 2rem 1rem;
+    }
 }

@@ -14,6 +14,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 10px;
     border-radius: 1rem;
+    overflow: hidden;
 }
 
 .cartImageContainer {
@@ -75,4 +76,29 @@
 .cartBtnContainer {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .CartContainer {
+        flex-direction: column;
+        width: 20rem;  
+    }
+}
+@media screen and (max-width: 420px) {
+    .CartContainer {
+        flex-direction: column;
+        width: 17rem;  
+    }
+    .cartImage {
+        height: 15rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .CartContainer {
+        flex-direction: column;
+        width: 15rem;  
+    }
+    .cartImage {
+        height: 13rem;
+    }
 }
