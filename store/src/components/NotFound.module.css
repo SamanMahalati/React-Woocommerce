@@ -14,11 +14,14 @@
     flex-direction: column;
 }
 .NotFoundVector {
-    height: 32rem;
+    height: 35rem;
+    padding: 0 0 3rem 0;
 }
 .NotFoundTitle {
     font-size: 30px;
     font-family: Iryekan;
+    text-align: center;
+    padding: 0 2rem;
 }
 .NotFoundButton {
     display: flex;
@@ -37,4 +40,23 @@
 .NotFoundLink {
     text-decoration: none;
     color: var(--secondaryBlue);
+}
+
+@media screen and (max-width: 800px) {
+    .NotFoundVector {
+        height: 24rem;
+    }
+}
+@media screen and (max-width: 540px) {
+    .NotFoundVector {
+        height: 17rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .NotFoundVector {
+        height: 14rem;
+    }
+    .NotFoundTitle {
+        font-size: 20px;
+    }
 }

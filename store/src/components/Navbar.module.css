@@ -26,6 +26,7 @@
 .navMenuContainer{
     display: flex;
     flex-direction: column;
+    z-index: 12;
 }
 .navMenuContainer > ul > li:hover {
     color: var(--secondaryBlue);
@@ -82,6 +83,7 @@
     display: flex;
     justify-content: center;
     padding: 1px 0 0 0;
+    z-index: 10;
 }
 
 .HamburgerContainer {
@@ -149,5 +151,6 @@
     }
     .navbar {
         justify-content: center;
+        gap: 2rem;
     }
 }
