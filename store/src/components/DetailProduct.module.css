@@ -70,6 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .DetailsProductBtn {
     outline: none;
@@ -107,10 +108,77 @@
 
 .DetailProductGoals {
     color: var(--grayColor);
+    text-align: justify;
 }
 
 .PeoductDetailText {
     line-height: 2.5rem;
     text-align: justify;
     padding: 1.2rem 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .DetailsProductFooter {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+    }
+    .DetailsProductBtn {
+        order: 1;
+    }
+}
+@media screen and (max-width: 980px) {
+    .DetailsBoxContainer {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .DetailsCourseContainer {
+        flex-wrap: wrap;
+    }
+    .DetailProductImage {
+        height: 30rem;
+    }
+    .DetailsRightPart {
+        order: 1;
+        padding: 0 3rem 1.3rem 3rem;
+        gap: 2rem;
+    }
+    .DetailsCourseContainer {
+        justify-content: center;
+    }
+    
+    
+}
+@media screen and (max-width: 630px) {
+    .DetailProductBenfits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem 2rem 3rem 2rem;
+    }
+    .DetailProductImage {
+        height: 20rem;
+    }
+    .DetailsProductFooter {
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .DetailProductBenfits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem 2rem 3rem 2rem;
+        grid-column-gap: 1rem;
+    }
+    .DetailProductImage {
+        height: 15rem;
+    }
+    .DetailProductName {
+        text-align: center;
+    }
+    .DetailsRightPart {
+        padding: 0 1rem 1.3rem 1rem;
+    }
+
 }
