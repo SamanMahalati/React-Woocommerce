@@ -23,10 +23,9 @@
     align-items: center;
     gap: 0.7rem;    
 }
-.navMenuContainer ul {
+.navMenuContainer{
     display: flex;
-    gap: 3rem;
-    list-style: none;
+    flex-direction: column;
 }
 .navMenuContainer > ul > li:hover {
     color: var(--secondaryBlue);
@@ -90,6 +89,10 @@
     height: 2rem;
 }
 
+.closeModalBtn , .navLinkTheme{
+    display: none;
+}
+
 @media screen and (max-width: 1410px) {
     .navbar {
         padding: 0.7rem 10rem 1rem 10rem;
@@ -110,11 +113,26 @@
     .HamburgerContainer {
         display: block;
     }
-    .navLink {
+    .navLinkTheme {
         display: none;
     }
     .Logo {
         display: none;
+    }
+    .closeModalBtn , .navLinkTheme {
+        display: block;
+    }
+    .closeModalBtn {
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid var(--secondaryBlue);
+        width: 100%;
+        padding: 0 0 1.2rem 0;
+    }
+    .navLinkTheme {
+        border-top: 1px solid var(--secondaryBlue);
+        width: 100%;
+        padding: 1.4rem 0 0 0;
     }
 }
 @media screen and (max-width: 460px) {

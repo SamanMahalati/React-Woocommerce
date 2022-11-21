@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import style from "./Navbar.module.css"
 
 //Context
@@ -6,6 +6,7 @@ import { CartContext } from '../context/CartContextProvider';
 
 //React Router Dom
 import { Link } from 'react-router-dom';
+import styled from 'styled-components'
 
 //Logo
 import Logo from '../images/Logo.jpg'
@@ -13,8 +14,43 @@ import Hamburger from "../images/hamburger.png"
 
 
 
-
 const Navbar = () => {
+
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const closeModalBtn = () => {
+        setOpenMenu(false)
+    }
+
+    const openModalBtn = () => {
+        setOpenMenu(true)
+    }
+
+    const Ul = styled.ul`
+     list-style: none ;
+     display: flex ;
+     align-items: flex-start ;
+     gap: 2rem ;
+     padding: 1rem 2rem ;   
+     
+     li{
+         
+    }
+    @media (max-width: 830px) {
+        background-color: #BFDBFE ;
+        margin: 0 ;
+        flex-direction: column ;
+        position: fixed ;
+        width: 15rem ;
+        top: 0 ;
+        right: 0 ;
+        height: 100vh ;
+        transform: ${openMenu ? `translate(0rem)` : `translate(100rem)`};
+    }
+
+    `
+
+
     const { state } = useContext(CartContext)
     return (
         <nav className={style.navbar}>
@@ -22,15 +58,23 @@ const Navbar = () => {
                 <img src={Logo} alt="Logo" className={style.Logo} />
             </div>
 
-            <img className={style.HamburgerContainer} src={Hamburger} alt="Hamburger Menu" />
-            
+            <img onClick={openModalBtn} className={style.HamburgerContainer} src={Hamburger} alt="Hamburger Menu" />
+
+
             <div className={style.navMenuContainer}>
-                <ul>
+
+                <Ul>
+                    <li className={style.closeModalBtn} onClick={closeModalBtn}>
+                        <svg className={style.closeModalBtn} xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                        </svg>
+                    </li>
                     <li><Link className={style.navLink} to="/">صفحه اصلی</Link></li>
                     <li><Link className={style.navLink} to="/products">دوره های آموزشی</Link></li>
                     <li><Link className={style.navLink} to="/blog">وبلاگ</Link></li>
                     <li><Link className={style.navLink} to="/aboutus">درباره ما</Link></li>
-                </ul>
+                    <li className={style.navLinkTheme}>تم سایت</li>
+                </Ul>
             </div>
 
             <div className={style.navBtnContainer}>
