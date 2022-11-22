@@ -1,0 +1,99 @@
+:root {
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
+    --fontColor: #344460;
+    --grayColor: #757575;
+}
+
+.loginSection {
+    padding: 10rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loginImage {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.logincontainer {
+    position: absolute;
+    z-index: 12;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 2.4rem 3rem;
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.loginTitle {
+    font-size: 25px;
+    font-family: iryekan;
+    color: var(--secondaryBlue);
+    text-align: center;
+}
+
+.loginContent {
+    color: var(--grayColor);
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.loginInputContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 0.7rem 1.2rem;
+    outline: none;
+    border: 1px solid var(--secondaryBlue);
+    border-radius: 1rem;
+    caret-color: var(--secondaryBlue);
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.inputCheckBoxContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.SiginLink {
+    text-decoration: none;
+    color: var(--secondaryBlue);
+}
+
+.loginBtn {
+    padding: 0.5rem 0;
+    border-radius: 7px;
+    border: 0;
+    outline: none;
+    background-color: var(--secondaryBlue);
+    color: var(--mainBlue);
+    font-size: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+}
