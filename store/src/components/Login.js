@@ -3,6 +3,9 @@ import React from 'react';
 //styles
 import style from "./Login.module.css"
 
+//React Router Dom
+import { Link } from "react-router-dom"
+
 //images
 import LoginImage from "../images/Login.jpg"
 
@@ -11,6 +14,11 @@ const Login = () => {
         <section className={style.loginSection}>
             <img className={style.loginImage} src={LoginImage} alt="background" />
 
+            <div className={style.LoginSignInContainer} >
+                <Link to="/signin" className={style.SigninLink}>ثبت نام </Link>
+                <div>|</div>
+                <Link to="/login" className={style.LoginLink}>ورود</Link>
+            </div>
             <div className={style.logincontainer}>
                 <form className={style.form}>
                     <div>
@@ -19,8 +27,8 @@ const Login = () => {
                     </div>
                     <div className={style.loginInputContainer}>
 
-                        <input type="text" name='username' className={style.input} placeholder="نام کاربری"/>
-                        <input type="password" name='password' className={style.input} placeholder="رمز عبور"/>
+                        <input type="text" name='username' className={style.input} placeholder="نام کاربری" />
+                        <input type="password" name='password' className={style.input} placeholder="رمز عبور" />
 
                         <div className={style.linksContainer}>
 
