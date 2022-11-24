@@ -4,6 +4,8 @@
     --white: #fff;
     --fontColor: #344460;
     --grayColor: #757575;
+    --redWhite: #F87171 ;
+    --redColor: #991B1B ;
 }
 
 .signinSection {
@@ -117,4 +119,12 @@
     border-radius: 3rem;
     font-size: 17px;
     text-decoration: none;
+}
+
+.errorsStyle {
+    background-color: var(--redWhite);
+    color: var(--redColor);
+    width: 15rem;
+    padding: 1px 10px;
+    border-radius: 8px;
 }
