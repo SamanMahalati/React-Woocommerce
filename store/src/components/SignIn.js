@@ -13,7 +13,7 @@ const SignIn = () => {
     return (
         <>
             <section className={style.signinSection}>
-                <img className={style.signinImage} src={signinImage} alt="background" />
+                
                     <div className={style.LoginSignInContainer} >
                         <Link to="/signin" className={style.SigninLink}>ثبت نام </Link>
                         <div>|</div>

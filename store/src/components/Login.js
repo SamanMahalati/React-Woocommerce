@@ -12,8 +12,7 @@ import LoginImage from "../images/Login.jpg"
 const Login = () => {
     return (
         <section className={style.loginSection}>
-            <img className={style.loginImage} src={LoginImage} alt="background" />
-
+            
             <div className={style.LoginSignInContainer} >
                 <Link to="/signin" className={style.SigninLink}>ثبت نام </Link>
                 <div>|</div>

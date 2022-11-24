@@ -11,24 +11,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
     overflow: hidden;
-}
-
-.loginImage {
-    width: 100%;
+    background-image: url("../images//Login.jpg");
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
 }
 
 .logincontainer {
-    position: absolute;
-    z-index: 12;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: var(--white);
     padding: 2.4rem 3rem;
     border-radius: 0.7rem;
@@ -99,12 +91,6 @@
 }
 
 .LoginSignInContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , 40%);
-    top: 7rem;
-    z-index: 15;
     background-color: var(--white);
     display: flex;
     align-items: center;
