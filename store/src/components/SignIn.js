@@ -13,10 +13,9 @@ const SignIn = () => {
     return (
         <>
             <section className={style.signinSection}>
-                
+
                     <div className={style.LoginSignInContainer} >
                         <Link to="/signin" className={style.SigninLink}>ثبت نام </Link>
-                        <div>|</div>
                         <Link to="/login" className={style.LoginLink}>ورود</Link>
                     </div>
                     <div className={style.signincontainer}>

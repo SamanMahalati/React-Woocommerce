@@ -100,14 +100,21 @@
     outline: none;
     gap: 1rem;
 }
-.SigninLink , .LoginLink {
-    padding: 1rem 2rem;
+
+.LoginLink {
+    padding: 1rem 1rem 1rem 2rem;
     text-decoration: none;
     color: var(--secondaryBlue);
     border-radius: 3rem;
     font-size: 17px;
 }
 
-.LoginSignInContainer div {
-    color: var(--secondaryBlue);
+
+.SigninLink{
+    background-color: var(--secondaryBlue);
+    color: var(--mainBlue);
+    padding: 1.2rem 3rem;
+    border-radius: 3rem;
+    font-size: 17px;
+    text-decoration: none;
 }
