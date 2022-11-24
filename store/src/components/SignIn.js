@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 //Validate data function
 import Validate from "../helper/validateSignin"
 
+//SweetAlert
+import swal from "sweetalert"
+
 //Style
 import style from "./SignIn.module.css"
 
@@ -39,6 +42,32 @@ const SignIn = () => {
     useEffect(() => {
         setErrors(Validate(data))
     }, [data])
+
+    const signInBtn = event => {
+        event.preventDefault()
+        if (!Object.keys(errors).length) {
+            swal({
+                title: "ثبت نام با موفقیت انجام شد",
+                text: "به خانواده برنامه نویسی ما خوش آمدید :)",
+                icon: "success",
+                button: "باشه",
+            })
+        } else {
+            swal({
+                title: "ثبت نام با شکست مواجه شد ",
+                text: "اطلاعات وارد شده معتبر نیست دوباره سعی کن :(",
+                icon: "error",
+                button: "باشه",
+            })
+            setTouched({
+                name: true,
+                email: true,
+                password: true,
+                phone: true ,
+                accepted: true,
+            })
+        }
+    }
 
 
 
@@ -77,14 +106,14 @@ const SignIn = () => {
                                 <div className={style.inputCheckBoxContainer}>
                                     <input type="checkbox" value={accepted} name='accepted' onChange={Changehandler} onFocus={FocusHandler} />
                                     {errors.accepted && touched.accepted && <span className={style.errorsStyle}>{errors.accepted}</span>}
-                                    <label>مرا به خاطر بسپار</label>
+                                    <label>قوانین را میپذیرم</label>
                                 </div>
 
                                 <a href="#" className={style.ForgotpasswordLink}>رمز عبور خود را فراموش کردید ؟</a>
 
                             </div>
 
-                            <button className={style.signinBtn}>ثبت نام</button>
+                            <button className={style.signinBtn} onClick={signInBtn}>ثبت نام</button>
                         </div>
                     </form>
                 </div>
