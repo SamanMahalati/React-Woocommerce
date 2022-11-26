@@ -85,6 +85,12 @@
     gap: 1rem;
     flex-wrap: wrap;
 }
+.checkoutBtnRemove {
+    display: none;
+    visibility: hidden;
+}
+
+
 
 .checkoutDetails {
     display: flex;

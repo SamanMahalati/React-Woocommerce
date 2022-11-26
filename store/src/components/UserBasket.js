@@ -18,6 +18,9 @@ import empty from "../images/empty-cart.svg"
 //Sweet Alert
 import swal from "sweetalert"
 
+//toastify
+import { ToastContainer } from 'react-toastify';
+
 const UserBasket = ({ data }) => {
     const { state, dispatch } = useContext(CartContext)
 
@@ -45,7 +48,7 @@ const UserBasket = ({ data }) => {
                     <span>جمع سبد خرید : {state.total.toLocaleString('en-US')}</span>
                     <span>تعداد محصولات : {state.itemsCounter}</span>
                 </div>
-                <div className={style.checkoutBtnContainer}>
+                <div className={state.itemsCounter === 0 ? style.checkoutBtnRemove : style.checkoutBtnContainer}>
                     <button className={style.checkoutBtn} onClick={() => {
                         dispatch({ type: "CHECKOUT", payload: data })
                         swal({
@@ -55,9 +58,18 @@ const UserBasket = ({ data }) => {
                             button: "باشه",
                         })
                     }}>خرید</button>
-                    <button className={style.clearBtn}>خالی کردن سبد خرید</button>
+                    <button className={style.clearBtn} onClick={() => {
+                        dispatch({ type: "CLEAR", payload: data })
+                        swal({
+                            title: "سبد خرید خالی شد",
+                            text: "",
+                            icon: "success",
+                            button: "باشه",
+                        }) 
+                    }}>خالی کردن سبد خرید</button>
                 </div>
             </div>
+            <ToastContainer />
         </section>
     );
 };

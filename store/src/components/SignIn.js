@@ -27,7 +27,7 @@ const SignIn = () => {
 
     const FocusHandler = event => {
         setTouched({ ...touched, [event.target.name]: true })
-        console.log(touched);
+        
     }
 
     const Changehandler = event => {
@@ -104,8 +104,9 @@ const SignIn = () => {
                             <div className={style.linksContainer}>
 
                                 <div className={style.inputCheckBoxContainer}>
-                                    <input type="checkbox" value={accepted} name='accepted' onChange={Changehandler} onFocus={FocusHandler} />
+                                    <input type="checkbox" value={accepted} name='accepted' onChange={Changehandler} />
                                     {errors.accepted && touched.accepted && <span className={style.errorsStyle}>{errors.accepted}</span>}
+                                    
                                     <label>قوانین را میپذیرم</label>
                                 </div>
 
