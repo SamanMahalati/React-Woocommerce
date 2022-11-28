@@ -122,3 +122,11 @@
 .LoginSignInContainer div {
     color: var(--secondaryBlue);
 }
+
+.errorsStyle {
+    background-color: var(--redWhite);
+    color: var(--redColor);
+    width: 15rem;
+    padding: 1px 10px;
+    border-radius: 8px;
+}

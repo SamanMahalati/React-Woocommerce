@@ -60,7 +60,7 @@ const SignIn = () => {
                 button: "باشه",
             })
             setTouched({
-                name: true,
+                username: true,
                 email: true,
                 password: true,
                 phone: true ,

@@ -40,7 +40,6 @@ const validation = (data) => {
 
     //Validate Accepted Rule
     if (!accepted) {
-        console.log(accepted);
         errors.accepted = "قوانین ما را قبول کنید "
     } else {
         delete errors.accepted
