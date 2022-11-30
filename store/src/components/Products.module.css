@@ -21,6 +21,13 @@
     font-family: iryekan;
 }
 
+.ProductTitleDark {
+    color: var(--mainBlue);
+    font-size: 30px;
+    padding: 3rem 0 0 0;
+    font-family: iryekan;
+}
+
 .ProductTitleEffect {
     position: absolute;
     bottom: 0.3rem;

@@ -1,16 +1,20 @@
-import React from 'react';
+import React , { useContext } from 'react';
 
 import style from './Header.module.css'
 
 //Images
 import HeaderVector from '../images/Header.png'
 
+//Context 
+import { ThemeContext } from '../context/ThemeContextProvider';
+
 const Header = () => {
+    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
     return (
         <header className={style.Header}>
             <div className={style.HeaderTitle}>
-                <h1 className={style.HeaderTitleText}>آموزش برنامه نویسی </h1>
-                <h5 className={style.HeaderTitleContent}>آموزش درست، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی جزو استاندارد های آموزشی که بدون شک باعث ورود شما به بازار کار خواهد شد.</h5>
+                <h1 className={themeIsLight ? style.HeaderTitleText : style.HeaderTitleTextDark}>آموزش برنامه نویسی </h1>
+                <h5 className={themeIsLight ? style.HeaderTitleContent : style.HeaderTitleContentDark}>آموزش درست، پروژه محور و جامع برنامه نویسی همراه با پشتیبانی دائمی جزو استاندارد های آموزشی که بدون شک باعث ورود شما به بازار کار خواهد شد.</h5>
                 <div className={style.HeaderBtnContainer}>
                     <button className={style.startBtn}>
                         <span>شروع دوره</span>
@@ -22,7 +26,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={style.HeaderVector}>
-                <img src={HeaderVector} alt="Header Image" className={style.HeaderVectorimg}/>
+                <img src={HeaderVector} alt="Header Image" className={style.HeaderVectorimg} />
             </div>
         </header>
     );

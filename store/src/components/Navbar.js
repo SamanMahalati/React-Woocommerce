@@ -59,6 +59,7 @@ const Navbar = () => {
 
     const darkModeHandler = () => {
         setThemeIsLight(!themeIsLight)
+        document.body.classList.toggle("AppDark")
         console.log(themeIsLight);
     }
 

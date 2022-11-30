@@ -4,12 +4,22 @@
     --white: #fff;
     --fontColor: #344460;
     --grayColor: #757575;
+    --FirstgrayColor: #313131;
+    --SecondgrayColor: #414141;
+    --ThirdgrayColor: #525252;
+    --ContentDarkColor: #accde2 ;
 }
 
 .Header {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.HeaderDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--FirstgrayColor);
 }
 
 .HeaderTitle {
@@ -24,11 +34,23 @@
     color: var(--fontColor);
     text-align: center;
 }
+.HeaderTitleTextDark {
+    font-size: 50px;
+    font-family: Iryekan;
+    color: var(--mainBlue);
+    text-align: center;
+}
 
 .HeaderTitleContent {
     font-size: 20px;
     line-height: 2.5rem;
     color: var(--grayColor);
+}
+
+.HeaderTitleContentDark {
+    font-size: 20px;
+    line-height: 2.5rem;
+    color: var(--ContentDarkColor);
 }
 
 .startBtn {

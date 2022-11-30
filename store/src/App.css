@@ -1,3 +1,16 @@
+:root {
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
+    --fontColor: #344460;
+    --thirdBlue: #000;
+    --FirstgrayColor: #404258;
+    --SecondgrayColor: #50577A;
+    --ThirdgrayColor: #474E68;
+    --ForthgrayColor: #6B728E;
+    --WhiteColor: #fff;
+}
+
 /* Sweet Alert Style Satrt */
 
 .swal-footer {
@@ -13,3 +26,6 @@
 }
 
 /* Sweet Alert Style End */
+.AppDark {
+    background-color: var(--FirstgrayColor);
+}

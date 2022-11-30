@@ -4,6 +4,10 @@
     --white: #fff ;
     --fontColor: #344460;
     --grayColor: #757575 ;
+    --FirstgrayColor: #313131;
+    --SecondgrayColor: #414141;
+    --ThirdgrayColor: #525252;
+    --ContentDarkColor: #accde2 ;
 }
 
 .footer {
@@ -14,6 +18,19 @@
     gap: 8rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     padding: 2rem 0 4rem 0;
+    flex-wrap: wrap;
+}
+
+.footerDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem 0 4rem 0;
+    background-color: var(--ThirdgrayColor);
+    color: var(--white);
     flex-wrap: wrap;
 }
 
@@ -34,6 +51,14 @@
     max-width: 35rem;
     text-align: justify;
     color: var(--grayColor);
+    line-height: 2.1rem;
+}
+
+.footerContentTextDark {
+    min-width: 10rem;
+    max-width: 35rem;
+    text-align: justify;
+    color: var(--ContentDarkColor);
     line-height: 2.1rem;
 }
 
@@ -59,7 +84,7 @@
     margin: 0.8rem 0;
     cursor: pointer;
 }
-.SitePartsLogosContainer {
+.SitePartsLogosContainer , .SitePartsLogosContainerDark {
     display: flex;
     align-items: center;
     width: 100%;
@@ -68,6 +93,11 @@
 .SitePartsLogosContainer svg {
     cursor: pointer;
     color: var(--secondaryBlue);
+}
+
+.SitePartsLogosContainerDark svg {
+    cursor: pointer;
+    color: var(--mainBlue);
 }
 
 .footerCourses {

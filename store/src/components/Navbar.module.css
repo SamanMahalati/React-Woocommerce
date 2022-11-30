@@ -4,10 +4,10 @@
     --white: #fff;
     --fontColor: #344460;
     --thirdBlue: #000;
-    --FirstgrayColor: #313131;
-    --SecondgrayColor: #414141;
-    --ThirdgrayColor: #525252;
-    --WhiteColor: #fff;
+    --FirstgrayColor: #404258;
+    --SecondgrayColor: #50577A;
+    --ThirdgrayColor: #474E68;
+    --ForthgrayColor: #6B728E;
 }
 
 .navbar {
@@ -32,7 +32,7 @@
     color: var(--fontColor);
     position: fixed;
     width: 100%;
-    background-color: var(--FirstgrayColor) ;
+    background-color: var(--ThirdgrayColor) ;
     z-index: 100;
 }
 

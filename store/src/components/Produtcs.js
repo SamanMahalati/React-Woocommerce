@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from 'react';
+import React , {useState , useEffect , useContext} from 'react';
 
 //components
 import Product from './Product';
@@ -6,6 +6,9 @@ import ProductsPaginnation from './ProductsPaginnation';
 
 //Style
 import style from "./Products.module.css"
+
+//Context
+import { ThemeContext } from '../context/ThemeContextProvider';
 
 const productArray = [
     {
@@ -79,6 +82,8 @@ const Products = () => {
     const [loading , setLoading] = useState(true)
     const [currentPage , setCurrentPage] = useState(1)
     const [productsPerPage , setProductsPerPage] = useState(6)
+    
+    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
 
     useEffect(() => {
         setProducts(productArray)
@@ -93,7 +98,7 @@ const Products = () => {
     return (
         <section className={style.ProductsSection}>
             <div className={style.ProductTitleContainer}>
-                <h1 className={style.ProductTitle}>دوره ها برنامه نویسی آکادمی</h1>
+                <h1 className={themeIsLight ? style.ProductTitle : style.ProductTitleDark}>دوره ها برنامه نویسی آکادمی</h1>
                 <span className={style.ProductTitleEffect}></span>
             </div>
             <div className={style.ProductContainer}>
