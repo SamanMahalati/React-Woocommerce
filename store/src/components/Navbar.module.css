@@ -1,9 +1,13 @@
 :root {
-    --secondaryBlue: #1E40AF ;
-    --mainBlue: #BFDBFE ;
-    --white: #fff ;
+    --secondaryBlue: #1E40AF;
+    --mainBlue: #BFDBFE;
+    --white: #fff;
     --fontColor: #344460;
     --thirdBlue: #000;
+    --FirstgrayColor: #313131;
+    --SecondgrayColor: #414141;
+    --ThirdgrayColor: #525252;
+    --WhiteColor: #fff;
 }
 
 .navbar {
@@ -18,25 +22,48 @@
     background-color: var(--white);
     z-index: 100;
 }
+
+.navbarDark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 20rem 1rem 20rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    color: var(--fontColor);
+    position: fixed;
+    width: 100%;
+    background-color: var(--FirstgrayColor) ;
+    z-index: 100;
+}
+
 .navBtnContainer {
     display: flex;
     align-items: center;
-    gap: 0.7rem;    
+    gap: 0.7rem;
 }
-.navMenuContainer{
+
+.navMenuContainer {
     display: flex;
     flex-direction: column;
     z-index: 12;
 }
-.navMenuContainer > ul > li:hover {
+
+.navMenuContainer>ul>li:hover {
     color: var(--secondaryBlue);
     cursor: pointer;
 }
 
 .navLink {
-    color: var(--fontColor);
+    color: var(--secondaryBlue);
     text-decoration: none;
+    transition: 0.3s;
 }
+.navLinkDark {
+    color: var(--mainBlue);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
 .navLink:hover {
     color: var(--secondaryBlue);
     cursor: pointer;
@@ -45,6 +72,7 @@
 .Logo {
     height: 4.5rem;
 }
+
 .navBtn {
     background-color: var(--mainBlue);
     color: var(--secondaryBlue);
@@ -58,7 +86,8 @@
     cursor: pointer;
     text-decoration: none;
 }
-.navBtnDarkMode ,
+
+.navBtnDarkMode,
 .navBtnBasket {
     background-color: var(--mainBlue);
     color: var(--secondaryBlue);
@@ -72,6 +101,7 @@
     cursor: pointer;
     position: relative;
 }
+
 .navProductCounter {
     position: absolute;
     top: 0;
@@ -92,39 +122,47 @@
     height: 2rem;
 }
 
-.closeModalBtn , .navLinkTheme{
+.closeModalBtn,
+.navLinkTheme {
     display: none;
 }
 
 @media screen and (max-width: 1410px) {
-    .navbar {
+    .navbar , .navbarDark {
         padding: 0.7rem 10rem 1rem 10rem;
     }
 }
 
 @media screen and (max-width: 1070px) {
-    .navbar {
+    .navbar , .navbarDark {
         padding: 0.7rem 5rem 1rem 5rem;
     }
 }
+
 @media screen and (max-width: 900px) {
-    .navbar {
+    .navbar , .navbarDark {
         padding: 0.7rem 2rem 1rem 2rem;
     }
 }
+
 @media screen and (max-width: 830px) {
     .HamburgerContainer {
         display: block;
     }
+
     .navLinkTheme {
         display: none;
     }
+
     .Logo {
         display: none;
     }
-    .closeModalBtn , .navLinkTheme {
+
+    .closeModalBtn,
+    .navLinkTheme {
         display: block;
     }
+
     .closeModalBtn {
         display: flex;
         justify-content: flex-end;
@@ -132,25 +170,30 @@
         width: 100%;
         padding: 0 0 1.2rem 0;
     }
+
     .navLinkTheme {
         border-top: 1px solid var(--secondaryBlue);
         width: 100%;
         padding: 1.4rem 0 0 0;
     }
 }
+
 @media screen and (max-width: 460px) {
     .navBtnDarkMode {
         display: none;
     }
+
     .navBtn {
         padding: 0.5rem;
     }
 }
+
 @media screen and (max-width: 370px) {
     .navBtnBasket {
         padding: 0.5rem;
     }
-    .navbar {
+
+    .navbar , .navbarDark {
         justify-content: center;
         gap: 2rem;
     }

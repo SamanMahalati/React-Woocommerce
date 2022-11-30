@@ -13,6 +13,7 @@ import Login from './components/Login';
 
 //Context
 import CartContextProvider from './context/CartContextProvider';
+import ThemeContextProvider from './context/ThemeContextProvider';
 
 //Style
 import "./App.css"
@@ -24,20 +25,22 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 const App = () => {
   return (
     <div className='App'>
-      <CartContextProvider>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/userBasket' element={<UserBasket />} />
-          <Route path='/signin' element={<SignIn />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/products/:id' element={<DetailProduct />} />
-          <Route path='/NotFound' element={<NotFound />} />
-          <Route path='/*' element={<Navigate to='/NotFound' />} />
-        </Routes>
-        <Footer/>
-      </CartContextProvider>
+      <ThemeContextProvider>
+        <CartContextProvider>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/userBasket' element={<UserBasket />} />
+            <Route path='/signin' element={<SignIn />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/products/:id' element={<DetailProduct />} />
+            <Route path='/NotFound' element={<NotFound />} />
+            <Route path='/*' element={<Navigate to='/NotFound' />} />
+          </Routes>
+          <Footer />
+        </CartContextProvider>
+      </ThemeContextProvider>
     </div>
   );
 }
