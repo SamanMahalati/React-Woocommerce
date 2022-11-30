@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState , useEffect } from 'react';
 import style from "./Navbar.module.css"
 
 //Context
@@ -60,8 +60,21 @@ const Navbar = () => {
     const darkModeHandler = () => {
         setThemeIsLight(!themeIsLight)
         document.body.classList.toggle("AppDark")
-        console.log(themeIsLight);
+        if (document.body.className.includes("AppDark")) {
+            localStorage.setItem("theme" , "dark")
+        } else {
+            localStorage.setItem("theme" , "light")
+        }        
     }
+
+    useEffect(() => {
+        let LocalStorageTheme = localStorage.getItem("theme")
+        
+        if (LocalStorageTheme === "dark") {
+            setThemeIsLight(false)
+            document.body.classList.toggle("AppDark")
+        }
+    } , [])
 
     return (
         <nav className={themeIsLight ? style.navbar : style.navbarDark} >
