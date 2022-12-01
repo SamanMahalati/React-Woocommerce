@@ -8,6 +8,7 @@ import UserBasketCart from './UserBasketCart';
 
 //Context
 import { CartContext } from '../context/CartContextProvider';
+import { ThemeContext } from '../context/ThemeContextProvider';
 
 //Style
 import style from "./UserBasket.module.css"
@@ -23,14 +24,15 @@ import { ToastContainer } from 'react-toastify';
 
 const UserBasket = ({ data }) => {
     const { state, dispatch } = useContext(CartContext)
+    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
 
     return (
-        <section className={style.UserBasketContainer}>
-            <div className={style.UserBasket}>
+        <section className={themeIsLight ? style.UserBasketContainer : style.UserBasketContainerDark}>
+            <div className={themeIsLight ? style.UserBasket : style.UserBasketDark}>
                 {
                     state.itemsCounter ?
                         state.selectedItems.map(item => <UserBasketCart key={item.id} data={item} />) :
-                        <div className={style.emptyContainer}>
+                        <div className={themeIsLight ? style.emptyContainer : style.emptyContainerDark}>
                             <img src={empty} alt="empty" />
                             <h2> سبد خرید شما خالی است ! </h2>
                             <h5>می‌توانید برای مشاهده محصولات بیشتر به صفحات زیر بروید:</h5>
@@ -43,7 +45,7 @@ const UserBasket = ({ data }) => {
                 }
             </div>
 
-            <div className={style.UserBasketCheckout}>
+            <div className={themeIsLight ? style.UserBasketCheckout : style.UserBasketCheckoutDark}>
                 <div className={style.checkoutDetails}>
                     <span>جمع سبد خرید : {state.total.toLocaleString('en-US')}</span>
                     <span>تعداد محصولات : {state.itemsCounter}</span>

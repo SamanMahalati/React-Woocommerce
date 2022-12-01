@@ -5,9 +5,13 @@
     --fontColor: #344460;
     --grayColor: #757575;
     --blueSoft: #2563EB; 
+    --FirstgrayColor: #404258;
+    --SecondgrayColor: #50577A;
+    --ThirdgrayColor: #474E68;
+    --ForthgrayColor: #6B728E;
 }
 
-.CartContainer {
+.CartContainer , .CartContainerDark {
     display: flex;
     align-items: center;
     background-color: var(--white);
@@ -15,6 +19,9 @@
     padding: 10px;
     border-radius: 1rem;
     overflow: hidden;
+}
+.CartContainerDark {
+    background-color: var(--ForthgrayColor);
 }
 
 .cartImageContainer {
@@ -35,11 +42,14 @@
     justify-content: space-between;
 }
 
-.cartBenefits {
+.cartBenefits , .cartBenefitsDark {
     display: flex;
     align-items: center;
     gap: 7px;
     color: var(--grayColor);
+}
+.cartBenefitsDark {
+    color: var(--white);
 }
 
 .cartBenefitsContainer {

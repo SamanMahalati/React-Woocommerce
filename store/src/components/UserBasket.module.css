@@ -8,6 +8,10 @@
     --LinkColor: #60A5FA;
     --greenColor: #16A34A;
     --redColor: #DC2626;
+    --FirstgrayColor: #404258;
+    --SecondgrayColor: #50577A;
+    --ThirdgrayColor: #474E68;
+    --ForthgrayColor: #6B728E;
 }
 
 .UserBasketContainer {
@@ -17,7 +21,15 @@
     gap: 5rem;
 }
 
-.UserBasket {
+.UserBasketContainerDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: var(--FirstgrayColor);
+}
+
+.UserBasket , .UserBasketDark {
     padding: 10rem 3rem 5rem 3rem;
     display: flex;
     min-height: 100vh;
@@ -28,7 +40,12 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
-.emptyContainer {
+.UserBasketDark {
+    background-color: var(--SecondgrayColor);
+    color: var(--whitesmoke);
+}
+
+.emptyContainer , .emptyContainerDark {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,6 +55,9 @@
 
 .emptyContainer h5 {
     color: var(--grayColor);
+}
+.emptyContainerDark h5 {
+    color: var(--whitesmoke);
 }
 
 .emptyLinkContainer {
@@ -52,7 +72,7 @@
     color: var(--LinkColor);
 }
 
-.UserBasketCheckout {
+.UserBasketCheckout , .UserBasketCheckoutDark {
     padding: 10rem 3rem 5rem 3rem;
     display: flex;
     flex-direction: column;
@@ -63,6 +83,10 @@
     align-self: flex-start;
     gap: 4rem;
 }
+.UserBasketCheckoutDark {
+    background-color: var(--SecondgrayColor);
+    color: var(--whitesmoke);
+}
 
 .checkoutBtn,
 .clearBtn {
@@ -72,6 +96,7 @@
     background-color: var(--greenColor);
     color: var(--white);
     padding: 0.6rem 1.3rem;
+    cursor: pointer;
 }
 
 .clearBtn {
@@ -85,6 +110,7 @@
     gap: 1rem;
     flex-wrap: wrap;
 }
+
 .checkoutBtnRemove {
     display: none;
     visibility: hidden;
@@ -102,15 +128,18 @@
     .UserBasket {
         align-items: center;
     }
+
     .UserBasketContainer {
         flex-wrap: wrap;
         flex-direction: row;
     }
+
     .UserBasket {
         padding: 2rem 3rem;
         order: 1;
-        
+
     }
+
     .UserBasketCheckout {
         width: 100%;
         flex-direction: row;
@@ -125,6 +154,7 @@
         align-items: center;
     }
 }
+
 @media screen and (max-width:360px) {
     .UserBasket {
         padding: 2rem 1rem;
