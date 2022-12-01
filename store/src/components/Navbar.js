@@ -17,8 +17,10 @@ import Hamburger from "../images/hamburger.png"
 
 
 const Navbar = () => {
-
+    
     const [openMenu, setOpenMenu] = useState(false)
+    const { state } = useContext(CartContext)
+    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
 
     const closeModalBtn = () => {
         setOpenMenu(false)
@@ -34,13 +36,13 @@ const Navbar = () => {
      align-items: flex-start ;
      gap: 2rem ;
      padding: 1rem 2rem ;   
-     
      li{
          
     }
     @media (max-width: 830px) {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-        background-color: #BFDBFE ;
+        background-color: ${themeIsLight ? "#BFDBFE" : "#6B728E"} ;
+        color: #BFDBFE;
         margin: 0 ;
         flex-direction: column ;
         position: fixed ;
@@ -52,10 +54,6 @@ const Navbar = () => {
     }
 
     `
-
-
-    const { state } = useContext(CartContext)
-    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
 
     const darkModeHandler = () => {
         setThemeIsLight(!themeIsLight)
@@ -83,13 +81,13 @@ const Navbar = () => {
                 <img src={Logo} alt="Logo" className={style.Logo} />
             </div>
 
-            <img onClick={openModalBtn} className={style.HamburgerContainer} src={Hamburger} alt="Hamburger Menu" />
+            <img onClick={openModalBtn} className={themeIsLight ? style.HamburgerContainer : style.HamburgerContainerDark} src={Hamburger} alt="Hamburger Menu" />
 
 
             <div className={style.navMenuContainer}>
 
                 <Ul>
-                    <li className={style.closeModalBtn} onClick={closeModalBtn}>
+                    <li className={themeIsLight ? style.closeModalBtn : style.closeModalBtnDark} onClick={closeModalBtn}>
                         <svg className={style.closeModalBtn} xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
                         </svg>
@@ -98,7 +96,7 @@ const Navbar = () => {
                     <li><Link className={themeIsLight ? style.navLink : style.navLinkDark} to="/products">دوره های آموزشی</Link></li>
                     <li><Link className={themeIsLight ? style.navLink : style.navLinkDark} to="/blog">وبلاگ</Link></li>
                     <li><Link className={themeIsLight ? style.navLink : style.navLinkDark} to="/aboutus">درباره ما</Link></li>
-                    <li className={style.navLinkTheme}>تم سایت</li>
+                    <li className={themeIsLight ? style.navLinkTheme : style.navLinkThemeDark} onClick={darkModeHandler}>{themeIsLight ? "تم روشن" : "تم تاریک"}</li>
                 </Ul>
             </div>
 

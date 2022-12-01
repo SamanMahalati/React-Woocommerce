@@ -32,7 +32,7 @@
     color: var(--fontColor);
     position: fixed;
     width: 100%;
-    background-color: var(--ThirdgrayColor) ;
+    background-color: var(--ThirdgrayColor);
     z-index: 100;
 }
 
@@ -48,16 +48,13 @@
     z-index: 12;
 }
 
-.navMenuContainer>ul>li:hover {
-    color: var(--secondaryBlue);
-    cursor: pointer;
-}
 
 .navLink {
     color: var(--secondaryBlue);
     text-decoration: none;
     transition: 0.3s;
 }
+
 .navLinkDark {
     color: var(--mainBlue);
     text-decoration: none;
@@ -117,36 +114,58 @@
     z-index: 10;
 }
 
-.HamburgerContainer {
+.HamburgerContainer,
+.HamburgerContainerDark {
     display: none;
     height: 2rem;
+    cursor: pointer;
+}
+
+.HamburgerContainerDark {
+    height: 3.5rem;
+    background-color: var(--mainBlue);
+    padding: 15px 15px;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 .closeModalBtn,
-.navLinkTheme {
+.navLinkTheme,
+.navLinkThemeDark,
+.closeModalBtnDark {
     display: none;
+    color: var(--secondaryBlue);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1410px) {
-    .navbar , .navbarDark {
+
+    .navbar,
+    .navbarDark {
         padding: 0.7rem 10rem 1rem 10rem;
     }
 }
 
 @media screen and (max-width: 1070px) {
-    .navbar , .navbarDark {
+
+    .navbar,
+    .navbarDark {
         padding: 0.7rem 5rem 1rem 5rem;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .navbar , .navbarDark {
+
+    .navbar,
+    .navbarDark {
         padding: 0.7rem 2rem 1rem 2rem;
     }
 }
 
 @media screen and (max-width: 830px) {
-    .HamburgerContainer {
+
+    .HamburgerContainer,
+    .HamburgerContainerDark {
         display: block;
     }
 
@@ -159,23 +178,43 @@
     }
 
     .closeModalBtn,
-    .navLinkTheme {
+    .navLinkTheme,
+    .navLinkThemeDark,
+    .closeModalBtnDark {
         display: block;
+        color: var(--mainBlue);
     }
 
-    .closeModalBtn {
+    .closeModalBtn,
+    .closeModalBtnDark {
         display: flex;
         justify-content: flex-end;
         border-bottom: 1px solid var(--secondaryBlue);
         width: 100%;
         padding: 0 0 1.2rem 0;
+        color: var(--secondaryBlue);
     }
 
-    .navLinkTheme {
+    .closeModalBtnDark {
+        border-bottom: 1px solid var(--mainBlue);
+        cursor: pointer;
+        color: var(--mainBlue);
+    }
+
+    .navLinkTheme,
+    .navLinkThemeDark {
         border-top: 1px solid var(--secondaryBlue);
         width: 100%;
         padding: 1.4rem 0 0 0;
+        cursor: pointer;
+        color: var(--secondaryBlue);
     }
+
+    .navLinkThemeDark {
+        border-top: 1px solid var(--mainBlue);
+        color: var(--mainBlue);
+    }
+
 }
 
 @media screen and (max-width: 460px) {
@@ -193,7 +232,8 @@
         padding: 0.5rem;
     }
 
-    .navbar , .navbarDark {
+    .navbar,
+    .navbarDark {
         justify-content: center;
         gap: 2rem;
     }
