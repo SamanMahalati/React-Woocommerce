@@ -16,63 +16,72 @@ const productArray = [
         image: "https://fronthooks.ir/images/React.svg",
         Name: "دوره متخصص ریکت و ریداکس",
         Time: 52,
-        Price: 2_400_000
+        Price: 2_400_000 ,
+        CourseName: "React" ,
     },
     {
         id: 2,
         image: "https://fronthooks.ir/images/tailwindCSS.svg",
         Name: "دوره جامع و پیشرفته TailwindCSS",
         Time: 18,
-        Price: 700_000
+        Price: 700_000 ,
+        CourseName: "Tailwind" ,
     },
     {
         id: 3,
         image: "https://fronthooks.ir/images/javascript.svg",
         Name: "دوره متخصص جاوااسکریپت",
         Time: 90,
-        Price: 1_700_000
+        Price: 1_700_000 ,
+        CourseName: "Js" ,
     },
     {
         id: 4,
         image: "https://fronthooks.ir/images/html-css.svg",
         Name: "دوره HTML + CSS",
         Time: 60,
-        Price: 500_000
+        Price: 500_000 ,
+        CourseName: "Html&Css" ,
     },
     {
         id: 5,
         image: "https://fronthooks.ir/images/nextjs.svg",
         Name: "دوره متخصص Next.js",
         Time: 40,
-        Price: 2_800_000
+        Price: 2_800_000 ,
+        CourseName: "NextJs" ,
     },
     {
         id: 6,
         image: "https://fronthooks.ir/images/git.svg",
         Name: "دوره گیت و گیت هاب",
         Time: 2,
-        Price: 300_000
+        Price: 300_000 ,
+        CourseName: "Git&Github" ,
     },
     {
         id: 7,
         image: "https://fronthooks.ir/images/flex-grid.svg",
         Name: "دوره پروژه محور فلکس و گرید",
         Time: 4,
-        Price: 100_000
+        Price: 100_000 ,
+        CourseName: "Flex&Grid" ,
     },
     {
         id: 8,
         image: "https://fronthooks.ir/images/freelancering.svg",
         Name: "دوره تجربیات فریلنسری",
         Time: 10,
-        Price: 430_000
+        Price: 430_000 ,
+        CourseName: "Freelancery" ,
     },
     {
         id: 9,
         image: "https://fronthooks.ir/images/vs-code.svg",
         Name: "دوره متخصص کار با VS Code",
         Time: 2,
-        Price: 80_000
+        Price: 80_000 ,
+        CourseName: "Vscode" ,
     },
 ]
 

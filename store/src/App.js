@@ -45,7 +45,7 @@ const App = () => {
               <Route path='/signin' element={<SignIn />} />
               <Route path='/login' element={<Login />} />
               <Route path='/products' element={<Products />} />
-              <Route path='/products/:id' element={<DetailProduct />} />
+              <Route path='/products/:Name' element={<DetailProduct />} />
               <Route path='/NotFound' element={<NotFound />} />
               <Route path='/*' element={<Navigate to='/NotFound' />} />
             </Routes>
