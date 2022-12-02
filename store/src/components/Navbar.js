@@ -1,4 +1,4 @@
-import React, { useContext, useState , useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import style from "./Navbar.module.css"
 
 //Context
@@ -17,10 +17,10 @@ import Hamburger from "../images/hamburger.png"
 
 
 const Navbar = () => {
-    
+
     const [openMenu, setOpenMenu] = useState(false)
     const { state } = useContext(CartContext)
-    const { themeIsLight , setThemeIsLight } = useContext(ThemeContext)
+    const { themeIsLight, setThemeIsLight } = useContext(ThemeContext)
 
     const closeModalBtn = () => {
         setOpenMenu(false)
@@ -35,7 +35,7 @@ const Navbar = () => {
      display: flex ;
      align-items: flex-start ;
      gap: 2rem ;
-     padding: 1rem 2rem ;   
+     padding: 1rem 2rem ; 
      li{
          
     }
@@ -59,24 +59,24 @@ const Navbar = () => {
         setThemeIsLight(!themeIsLight)
         document.body.classList.toggle("AppDark")
         if (document.body.className.includes("AppDark")) {
-            localStorage.setItem("theme" , "dark")
+            localStorage.setItem("theme", "dark")
         } else {
-            localStorage.setItem("theme" , "light")
-        }        
+            localStorage.setItem("theme", "light")
+        }
     }
 
     useEffect(() => {
         let LocalStorageTheme = localStorage.getItem("theme")
-        
+
         if (LocalStorageTheme === "dark") {
             setThemeIsLight(false)
             document.body.classList.toggle("AppDark")
         }
-    } , [])
+    }, [])
 
     return (
         <nav className={themeIsLight ? style.navbar : style.navbarDark} >
-            
+
             <div className={style.navLogoContainer}>
                 <img src={Logo} alt="Logo" className={style.Logo} />
             </div>
