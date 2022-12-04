@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 //React Router Dom
 import { Link } from 'react-router-dom';
 
@@ -8,10 +8,16 @@ import style from "./NotFound.module.css"
 //images
 import NotFoundImage from '../images/404.jpg'
 
+//Context
+import { ThemeContext } from "../context/ThemeContextProvider"
+
+
 const NotFound = () => {
+    const { themeIsLight, setThemeIsLight } = useContext(ThemeContext)
+    
     return (
         <section className={style.NotFoundContainer}>
-            <h1 className={style.NotFoundTitle}>متاسفانه صفحه مورد نظر شما پیدا نشد...!</h1>
+            <h1 className={themeIsLight ? style.NotFoundTitle : style.NotFoundTitleDark}>متاسفانه صفحه مورد نظر شما پیدا نشد...!</h1>
             <button className={style.NotFoundButton}>
                 <Link to="/" className={style.NotFoundLink}>برگشت به صفحه اصلی</Link>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">

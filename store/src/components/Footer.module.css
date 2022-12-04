@@ -8,6 +8,7 @@
     --SecondgrayColor: #414141;
     --ThirdgrayColor: #525252;
     --ContentDarkColor: #accde2 ;
+    --Black: #000
 }
 
 .footer {
@@ -64,6 +65,8 @@
 
 .footerLogo {
     height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
 }
 
 .footerSiteParts{
@@ -109,6 +112,15 @@
 .footerCourses ul > li {
     margin: 0.8rem 0;
     cursor: pointer;
+}
+
+.linkCoursesFooter {
+    text-decoration: none;
+    color: var(--Black);
+}
+.linkCoursesFooterDark {
+    text-decoration: none;
+    color: var(--white);
 }
 
 @media screen and (max-width: 660px) {

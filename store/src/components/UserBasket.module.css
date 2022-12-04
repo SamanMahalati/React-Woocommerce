@@ -125,22 +125,22 @@
 }
 
 @media screen and (max-width:930px) {
-    .UserBasket {
+    .UserBasket , .UserBasketDark {
         align-items: center;
     }
 
-    .UserBasketContainer {
+    .UserBasketContainer , .UserBasketContainerDark {
         flex-wrap: wrap;
         flex-direction: row;
     }
 
-    .UserBasket {
+    .UserBasket , .UserBasketDark {
         padding: 2rem 3rem;
         order: 1;
 
     }
 
-    .UserBasketCheckout {
+    .UserBasketCheckout , .UserBasketCheckoutDark {
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
@@ -149,14 +149,14 @@
 }
 
 @media screen and (max-width:500px) {
-    .UserBasketCheckout {
+    .UserBasketCheckout , .UserBasketCheckoutDark {
         flex-direction: column;
         align-items: center;
     }
 }
 
 @media screen and (max-width:360px) {
-    .UserBasket {
+    .UserBasket , .UserBasketDark {
         padding: 2rem 1rem;
     }
 }

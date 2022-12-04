@@ -1,0 +1,48 @@
+:root {
+    --secondaryBlue: #1E40AF ;
+    --mainBlue: #BFDBFE ;
+    --white: #fff ;
+    --fontColor: #344460;
+    --grayColor: #757575 ;
+    --FirstgrayColor: #313131;
+    --SecondgrayColor: #414141;
+    --ThirdgrayColor: #525252;
+    --ContentDarkColor: #accde2 ;
+    --Black: #000
+}
+
+.cartContainer {
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    margin: 2rem 1rem 4rem 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    min-width: 10rem;
+    max-width: 22rem;
+}
+
+.studentName {
+    font-size: 20px;
+}
+
+.StudentCommentCart {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.studentImageContainer img {
+    height: 3.5rem;
+}
+
+.cartHeader {
+    display: flex;
+    gap: 2rem;
+}
+
+.studendtComment {
+    text-align: justify;
+}
+

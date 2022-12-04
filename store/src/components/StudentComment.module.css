@@ -1,0 +1,25 @@
+
+.CartTitle {
+    color: var(--secondaryBlue);
+    font-size: 30px;
+    padding: 3rem 0 0 0;
+    font-family: iryekan;
+    text-align: center;
+}
+
+.CartTitleContainer {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.CartTitleEffect {
+    position: absolute;
+    bottom: 0.3rem;
+    width: 18rem;
+    height: 0.9rem;
+    opacity: 0.5;
+    text-align: center;
+    background-color: var(--mainBlue);
+}
